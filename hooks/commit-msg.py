@@ -51,7 +51,7 @@ if not re.match(pattern, msg):
 
 elif len(msg.split(':')[1]) > CONFIG['length']['max'] or len(msg.split(':')[1]) < CONFIG['length']['min']:
     passCheck = False
-    errMsg = f"commit message is not between min [{CONFIG['length']['min']}] and max [{CONFIG['length']['max']}] characters!"
+    errMsg = f"commit message is not between min [{CONFIG['length']['min']}] and max [{CONFIG['length']['max']}] characters!"   
 
 
 if not passCheck:

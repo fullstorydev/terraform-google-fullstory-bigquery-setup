@@ -1,0 +1,22 @@
+formatter: "markdown"
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+content: |-
+  {{ .Requirements }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  ## Usage
+
+  ### With Cloud DNS Record Creation
+
+  ```hcl
+  {{ include "examples/basic/main.tf" }}
+  ```
