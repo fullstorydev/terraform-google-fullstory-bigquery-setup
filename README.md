@@ -7,27 +7,26 @@
 This module creates all the proper permissions and service accounts so that Fullstory can connect to the dataset and load data. For more information checkout [this KB article](https://help.fullstory.com/hc/en-us/articles/6295305958551-Google-BigQuery).
 
 <!-- BEGIN_TF_DOCS -->
-
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13  |
-| <a name="requirement_google"></a> [google](#requirement_google)          | >= 5.0.0 |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 5.0.0 |
 
 ## Inputs
 
-| Name                                                            | Description                                                 | Type     | Default | Required |
-| --------------------------------------------------------------- | ----------------------------------------------------------- | -------- | ------- | :------: |
-| <a name="input_dataset_id"></a> [dataset_id](#input_dataset_id) | The dataset that Fullstory will use to sync data.           | `string` | n/a     |   yes    |
-| <a name="input_project"></a> [project](#input_project)          | The target GCP project that will be used for all resources. | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_dataset_id"></a> [dataset\_id](#input\_dataset\_id) | The dataset that Fullstory will use to sync data. | `string` | n/a | yes |
+| <a name="input_project"></a> [project](#input\_project) | The target GCP project that will be used for all resources. | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                                                                                                 | Description                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| <a name="output_service_account"></a> [service_account](#output_service_account)                                     | The Fullstory service account that Fullstory will use to load data.                              |
-| <a name="output_service_account_private_key"></a> [service_account_private_key](#output_service_account_private_key) | The private key that can be used in the Fullstory app when configuring the BigQuery integration. |
+| Name | Description |
+|------|-------------|
+| <a name="output_service_account"></a> [service\_account](#output\_service\_account) | The Fullstory service account that Fullstory will use to load data. |
+| <a name="output_service_account_private_key"></a> [service\_account\_private\_key](#output\_service\_account\_private\_key) | The private key that can be used in the Fullstory app when configuring the BigQuery integration. |
 
 ## Usage
 
@@ -64,7 +63,6 @@ output "fullstory_bigquery_setup_service_account_private_key" {
   sensitive = true
 }
 ```
-
 <!-- END_TF_DOCS -->
 
 ## Obtaining the private key
