@@ -22,6 +22,9 @@ module "fullstory_bigquery_setup" {
 }
 
 # This block is important so that the value can be viewed with `terraform output`.
+#
+# The secret can be copied to your clipboard with:
+# terraform output -raw fullstory_bigquery_setup_service_account_private_key | base64 -d | pbcopy
 output "fullstory_bigquery_setup_service_account_private_key" {
   value     = module.fullstory_bigquery_setup.service_account_private_key
   sensitive = true
