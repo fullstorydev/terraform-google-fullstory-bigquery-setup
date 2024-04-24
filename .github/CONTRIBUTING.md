@@ -13,6 +13,14 @@ contribute with our workflow.
 
 - Run the `init-repo.sh` to ensure your dev workspace is correct with all tooling
 
+## Generating the README
+
+You can generate the README with HCL examples using `terraform-docs`. You can install `terraform-docs` by following [this guide](https://terraform-docs.io/user-guide/installation/).
+
+```
+terraform-docs markdown .
+```
+
 ## Commit Messages
 
 This repo follows the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/#summary) message style. This is strictly enforced by git hooks (which should have been activated by the `init-repo.sh`) and by CI. A small example is below:
