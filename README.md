@@ -50,7 +50,7 @@ resource "google_bigquery_dataset" "main" {
 }
 
 module "fullstory_data_integration" {
-  source     = "fullstorydev/fullstory-data-integration/google"
+  source     = "fullstorydev/fullstory-bigquery-setup/google"
   dataset_id = google_bigquery_dataset.main.dataset_id
   project    = "my-project-id"
 }
