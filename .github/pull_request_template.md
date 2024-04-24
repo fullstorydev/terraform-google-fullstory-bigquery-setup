@@ -15,7 +15,6 @@
 
 ## Checklist before submitting PR for review
 
-- [ ] I have tested these changes with the included tfvars
 - [ ] This change requires a doc update, and I've included it
 - [ ] My code follows the style guidelines of this project
 - [ ] I have ensured my code is commented and any new terraform variables have proper descriptions
