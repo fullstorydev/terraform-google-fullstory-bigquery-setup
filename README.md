@@ -1,36 +1,35 @@
-<a href="https://fullstory.com"><img src="https://github.com/fullstorydev/terraform-google-fullstory-data-integration/blob/main/assets/fs-logo.png?raw=true"></a>
+<a href="https://fullstory.com"><img src="https://github.com/fullstorydev/terraform-google-fullstory-bigquery-setup/blob/main/assets/fs-logo.png?raw=true"></a>
 
-# terraform-google-fullstory-data-integration
+# terraform-google-fullstory-bigquery-setup
 
-[![GitHub release](https://img.shields.io/github/release/fullstorydev/terraform-google-fullstory-data-integration.svg)](https://github.com/fullstorydev/terraform-google-fullstory-data-integration/releases/)
+[![GitHub release](https://img.shields.io/github/release/fullstorydev/terraform-google-fullstory-bigquery-setup.svg)](https://github.com/fullstorydev/terraform-google-fullstory-bigquery-setup/releases/)
 
 This module creates all the proper permissions and service accounts so that Fullstory can connect to the dataset and load data. For more information checkout [this KB article](https://help.fullstory.com/hc/en-us/articles/6295305958551-Google-BigQuery).
 
 <!-- BEGIN_TF_DOCS -->
-
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13  |
-| <a name="requirement_google"></a> [google](#requirement_google)          | >= 5.0.0 |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 5.0.0 |
 
 ## Inputs
 
-| Name                                                            | Description                                                       | Type     | Default | Required |
-| --------------------------------------------------------------- | ----------------------------------------------------------------- | -------- | ------- | :------: |
-| <a name="input_dataset_id"></a> [dataset_id](#input_dataset_id) | The dataset that you want Fullstory to use for data integrations. | `string` | n/a     |   yes    |
-| <a name="input_project"></a> [project](#input_project)          | The GCP project that you want to create resources in.             | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_dataset_id"></a> [dataset\_id](#input\_dataset\_id) | The dataset that Fullstory will use to sync data. | `string` | n/a | yes |
+| <a name="input_project"></a> [project](#input\_project) | The target GCP project that will be used for all resources. | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                                                             | Description                                                                                |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| <a name="output_service_account"></a> [service_account](#output_service_account) | The Fullstory service account that Fullstory will use to load data into data integrations. |
+| Name | Description |
+|------|-------------|
+| <a name="output_service_account"></a> [service\_account](#output\_service\_account) | The Fullstory service account that Fullstory will use to load data. |
 
 ## Usage
 
-### With Cloud DNS Record Creation
+### With Existing Dataset
 
 ```hcl
 resource "google_bigquery_dataset" "main" {
@@ -56,9 +55,8 @@ module "fullstory_data_integration" {
   project    = "my-project-id"
 }
 ```
-
 <!-- END_TF_DOCS -->
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/fullstorydev/terraform-google-fullstory-cloud-relay/blob/main/.github/CONTRIBUTING.md) for best practices and instructions on setting up your dev environment.
+See [CONTRIBUTING.md](https://github.com/fullstorydev/terraform-google-fullstory-bigquery-setup/blob/main/.github/CONTRIBUTING.md) for best practices and instructions on setting up your dev environment.

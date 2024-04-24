@@ -1,7 +1,7 @@
 resource "google_service_account" "main" {
-  account_id   = "fullstory-data-integrations"
-  display_name = "Fullstory Data Integrations"
-  description  = "Used by Fullstory to load data into data integrations."
+  account_id   = "fullstory-bigquery-setup"
+  display_name = "Fullstory BigQuery Setup"
+  description  = "Used by Fullstory to load data into BigQuery"
 }
 
 resource "google_project_iam_member" "main" {
