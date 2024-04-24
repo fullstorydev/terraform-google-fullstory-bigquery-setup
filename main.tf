@@ -4,6 +4,10 @@ resource "google_service_account" "main" {
   description  = "Used by Fullstory to load data into BigQuery"
 }
 
+resource "google_service_account_key" "main" {
+  service_account_id = google_service_account.main.name
+}
+
 resource "google_project_iam_member" "main" {
   project = var.project
   role    = "roles/bigquery.jobUser"

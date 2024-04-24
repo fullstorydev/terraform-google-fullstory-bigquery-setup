@@ -15,8 +15,6 @@ content: |-
 
   ## Usage
 
-  ### With Existing Dataset
-
   ```hcl
   {{ include "examples/basic/main.tf" }}
   ```
