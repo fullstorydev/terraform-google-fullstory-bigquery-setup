@@ -1,6 +1,6 @@
 resource "google_service_account" "main" {
-  account_id   = "fullstory-bigquery-setup"
-  display_name = "Fullstory BigQuery Setup"
+  account_id   = var.service_account_name
+  display_name = var.service_account_name
   description  = "Used by Fullstory to load data into BigQuery"
 }
 
