@@ -20,6 +20,7 @@ This module creates all the proper permissions and service accounts so that Full
 |------|-------------|------|---------|:--------:|
 | <a name="input_dataset_id"></a> [dataset\_id](#input\_dataset\_id) | The dataset that Fullstory will use to sync data. | `string` | n/a | yes |
 | <a name="input_project"></a> [project](#input\_project) | The target GCP project that will be used for all resources. | `string` | n/a | yes |
+| <a name="input_service_account_name"></a> [service\_account\_name](#input\_service\_account\_name) | The name of the service account to use with Fullstory | `string` | `"fullstory-bigquery-setup"` | no |
 
 ## Outputs
 
